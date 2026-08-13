@@ -3,6 +3,7 @@ import { Plus } from 'lucide-react'
 import type { Transaction } from './types'
 import Header from './components/Header'
 import SummaryCards from './components/SummaryCards'
+import CategoryChart from './components/CategoryChart'
 import TransactionForm, { type TransactionFormData } from './components/TransactionForm'
 import TransactionList from './components/TransactionList'
 import { useTransactions } from './hooks/useTransactions'
@@ -53,6 +54,7 @@ export default function App() {
         ) : (
           <>
             <SummaryCards transactions={transactions} />
+            <CategoryChart transactions={transactions} />
 
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold text-gray-900">Giao dịch gần đây</h2>
